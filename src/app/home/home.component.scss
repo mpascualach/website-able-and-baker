@@ -1,0 +1,20 @@
+.expanding-box {
+    height: 50%;
+    width: 60%;
+    border: 1px solid white;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    /* animation: expand 3s linear 2s 1; */
+}
+
+@keyframes expand {
+    from {
+      height: 0px;
+      width: 0px;
+    }
+    to {
+      height: 50%;
+      width: 60%;
+    }
+}
