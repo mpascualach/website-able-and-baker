@@ -1,61 +1,84 @@
 .expanding-box {
-  height: 50%;
-  width: 60%;
+  height: 60%;
+  width: 70%;
   border: 1px solid white;
   position: absolute;
-  left: 20%;
+  left: 15%;
   top: 20%;
   /* animation: expand 3s linear 2s 1; */
   .screen {
     height: 100%;
     background-color: rgba(255,255,255,0.4);
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-    .error-noise {
-      position: relative;
-      width: 100%;
+    .latest-news {
       height: 100%;
-      .error-effect {
-        position: absolute;
-        width: 100%;
+      img {
         height: 100%;
-        background-image: url('https://media.giphy.com/media/UDk0qpqI6d0Hu/giphy.gif');
-        background-size: cover;
+        width: 100%;
+        image-rendering: crisp-edges;
       }
-      .error-effect::before {
-        content: " ";
+      .news-announcement {
         position: absolute;
+        top: 5%;
+        left: 0;
         width: 100%;
-        height: 100%;
-        background: rgba(255,255,255,0.2);
-        -moz-animation: noiseeffect 4000ms infinite linear;
-        -o-animation: noiseeffect 4000ms infinite linear;
-        -webkit-animation: noiseeffect 4000ms infinite linear;
-        animation: noiseeffect 4000ms infinite linear;
+        font-size: 35px;
+        color: white;
+        font-family: Stormfaze;
+        text-align: center; 
+        opacity: 0;
+        animation: textDisappear 1s;
       }
     }
   }
+  .screen:hover {
+    cursor: pointer;
+    .latest-news {
+      .news-announcement {
+        opacity: 1;
+        position: absolute;
+        animation: textAppear 1s;
+      }
+    }
+  }
+  .screen::after {
+    content:'';
+    display: block;
+    position: absolute;
+    left: 12%;
+    bottom: 0px;
+    width: 80%;
+    max-width: 210px;
+    height: 10px;
+    background: transparent;
+    border-radius: 100px/50px;
+    box-shadow: 0 50px 40px rgba(0,0,0,0.5);
+  }
 }
 
-@keyframes expand {
-  from {
-    height: 0px;
-    width: 0px;
-  }
-  to {
-    height: 50%;
-    width: 60%;
-  }
-}
-
-@keyframes screen {
+@keyframes textAppear {
   0% {
-    transform: scale(1.03);
+    position: absolute;
+    top: 0.5%;
+    opacity: 0;
   }
-  50% {
-    transform: scale(1.0);
-  }
+
   100% {
-    transform: scale(1.03);
+    position: absolute;
+    top: 5%;
+    opacity: 1;
+  }
+}
+
+@keyframes textDisappear {
+  0% {
+    position: absolute;
+    top: 5%;
+    opacity: 1;
+  }
+
+  100% {
+    position: absolute;
+    top: 0.5%;
+    opacity: 0;
   }
 }

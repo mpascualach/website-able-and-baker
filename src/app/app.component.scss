@@ -1,14 +1,19 @@
 header {
-    background: none;
+  background: none;
+  position: absolute;
+  height: 15%;
+  img {
     position: absolute;
-    img {
-        height: 100%;
-        margin-top: 5px;
-    }
+    height: 80%;
+    top: 10%;
+  }
+  .able-links{
+    color: white;
+  }
 }
 
 main {
-    height: 100%;
-    width: 100%;
-    background-color: black;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }

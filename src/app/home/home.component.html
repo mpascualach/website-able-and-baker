@@ -1,13 +1,22 @@
 <div class="expanding-box">
   <div class="screen">
-
+    <div
+      class="latest-news"
+      *ngIf="latestNews && latestNews.poster">
+      <img [src]="latestNews.poster" [alt]="latestNews.title">
+      <div 
+        class="news-announcement"
+        *ngIf="latestNews && latestNews.latest">
+          {{ latestNews.latest }} {{ latestNews.title }}
+      </div>
+    </div>
   </div>
 </div>
+
 <footer>
   <div class="news-toggler">
     <div class="news-button">
 
     </div>
   </div>
-  <div></div>
 </footer>

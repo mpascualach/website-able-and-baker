@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { news } from '../news/news'; 
 
 @Component({
   selector: 'app-home',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  currentNews: any;
+  currentNews: any = news;
+  latestNews: object;
 
-  constructor() { }
+  constructor() { 
+    this.latestNews = this.currentNews[0]
+    console.log(this.latestNews)
+  }
 
   ngOnInit() {
     
