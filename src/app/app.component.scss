@@ -2,18 +2,37 @@ header {
   background: none;
   position: absolute;
   height: 15%;
+  width: 100%;
   img {
     position: absolute;
     height: 80%;
     top: 10%;
+    border-radius: 10px;
   }
-  .able-links{
+  .website-links{
     color: white;
+    float: right;
+    ul {
+      display: flex;
+      li {
+        list-style-type: none;
+        height: 50%;
+        /* border: 1px solid red; */
+        padding: 20px;
+        padding-top: 30px;
+        font-size: 22px;
+        font-family: Stormfaze;
+      }
+      li:hover {
+        color: red;
+        cursor: pointer;
+      }
+    }
   }
 }
 
 main {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #040423;
 }
