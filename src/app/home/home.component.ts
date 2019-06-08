@@ -6,14 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  videoStatus: string;
+  currentNews: any;
 
   constructor() { }
 
   ngOnInit() {
-    setTimeout(()=>{
-      this.videoStatus = 'loading'
-    }, 1000)
+    
   }
 
 }

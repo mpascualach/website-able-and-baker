@@ -1,6 +1,14 @@
+header {
+    background: none;
+    position: absolute;
+    img {
+        height: 100%;
+        margin-top: 5px;
+    }
+}
+
 main {
     height: 100%;
     width: 100%;
     background-color: black;
-    position: relative;
 }
